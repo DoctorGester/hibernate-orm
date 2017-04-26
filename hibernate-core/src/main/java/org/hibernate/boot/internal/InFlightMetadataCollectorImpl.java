@@ -959,7 +959,7 @@ public class InFlightMetadataCollectorImpl implements InFlightMetadataCollector 
 		}
 
 		if ( physicalName == null ) {
-			throw new MappingException(
+			throw new RecoverableException(
 					"Unable to find column with logical name " + logicalName.render() + " in table " + table.getName()
 			);
 		}
